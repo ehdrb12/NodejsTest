@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/', index);//IoT때문에 주석처리
+app.use('/', index);//IoT때문에 주석처리
 app.use('/users', users);
 
 //IoT시스템UI 생성
@@ -32,7 +32,7 @@ const template = multiline(()=>{/*
 <!doctype html>
 <html>
 	<head>
-		<title>컴퓨터 GPIO 입출력 시스템</title>
+		<title>컴퓨터  GPIO 입출력 시스템</title>
 		<meta charset="UTF-8">
 		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 		<style>
@@ -101,10 +101,12 @@ const template = multiline(()=>{/*
 	</script>
 </html>
 */});
+/*
 //IoT시스템용 라우터(컨트롤러)=API서버 만들기(아래)
 app.get('/', function(req,res){
 	res.send(template);			
 });
+*/
 app.get('/on', function(req,res){
 	//digitalWrite(11, HIGH); //장비와 연결되었을때 적용
 	res.send("전등 ON");
