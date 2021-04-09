@@ -1,4 +1,3 @@
-
 /**
  * MySQL 데이터베이스 사용하기
  * 기술참조: https://www.inflearn.com/course/2017-node-js-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D
@@ -413,4 +412,3 @@ app.on('close', function () {
 http.createServer(app).listen(app.get('port'), function(){
   console.log('서버가 시작되었습니다. 포트 : ' + app.get('port'));
 });
- 
